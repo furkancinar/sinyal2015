@@ -1,4 +1,4 @@
-FURKAN ÇÝNAR	
+ï»¿FURKAN Ã‡Ä°NAR	
 030115230
-Sinyal Ýþleme
+Sinyal Ä°ÅŸleme
 Proje:MATLAB ile sentezleme

@@ -13,7 +13,7 @@ for okt= 0:8 %döngünün oktav sayýsý kadar dönmesi için bu deðerler seçildi%
         
 for j=1:p
     if nota==char(notalar(j)) %istenilen nota ve dizideki notalarýn birbirine eþitliðini kontrol eden kýsým%
-        ff=2^okt*(2^((j-1)/12)*sabitdeger); %istenilen notanýn frekans karþýlýðýný bulan formül%
+        ff=2^okt*(2^((j-1)/12)*sabitdeger); %istenilen notanýn frekans karþýlýðýný bulan formül %
     end
 end
 

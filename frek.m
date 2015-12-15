@@ -1,6 +1,8 @@
 function ff=frek(nota,ok)
 
-notalar=['C' 'c' 'D' 'd' 'E' 'F' 'f' 'G' 'g' 'A' 'a' 'B']; %notalarýn karþýlýðý olarak tanýmlanan dizi deðerleri%
+notalar=['C' 'c' 'D' 'e' 'E' 'F' 'f' 'G' 'g' 'A' 'b' 'B']; %notalarýn karþýlýðý olarak tanýmlanan dizi deðerleri%
+
+%C=Do, c=Do#, D=Re, e=mibemol, E=Mi, F=Fa, f=Fa#, G=Sol, g=Sol#, A=La, b=sibemol, B=Si %  
 
 sabitdeger=16.35; %seçilen sabit deðer%
 

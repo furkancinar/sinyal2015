@@ -1,1 +1,2 @@
-f=frek('G',3)
+f=frek('Sus') 
+

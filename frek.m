@@ -1,25 +1,27 @@
-function ff=frek(nota,ok)
-
-notalar=['C' 'c' 'D' 'e' 'E' 'F' 'f' 'G' 'g' 'A' 'b' 'B']; %notalarýn karþýlýðý olarak tanýmlanan dizi deðerleri%
-
-%C=Do, c=Do#, D=Re, e=mibemol, E=Mi, F=Fa, f=Fa#, G=Sol, g=Sol#, A=La, b=sibemol, B=Si %  
-
-sabitdeger=16.35; %seçilen sabit deðer%
-
-p=length(notalar);
+function ff=frek(nota,ok) %nota ve okt deðerlerini alýr%
+notalar={'Do','Dod', 'Re', 'Mib' ,'Mi' ,'Fa', 'Fad', 'Sol', 'Sold', 'La', 'Sib', 'Si','Sus'}; %nota için tanýmladýðým deðerleri  diziye tanýmladým
+sabitdeger=16.35;  %seçilen sabit deðer%
+p=length(notalar); %notalar dizisinin uzunlugu%
 
 
+if nargin<2 %fonksiyona gelen deðerler 2den küçükse
+     ok=4; %oktavý 4 e eþitle
+end
 
-for okt= 0:8 %döngünün oktav sayýsý kadar dönmesi için bu deðerler seçildi%
+for okt=0:8 %döngünün oktav sayýsý kadar dönmesi için bu deðerler seçildi%
     if okt==ok % dögüdeli oktav ile istenilen oktavýn eþitliðinin kotrol edildiði kýsým%
-        
-for j=1:p
-    if nota==char(notalar(j)) %istenilen nota ve dizideki notalarýn birbirine eþitliðini kontrol eden kýsým%
-        ff=2^okt*(2^((j-1)/12)*sabitdeger); %istenilen notanýn frekans karþýlýðýný bulan formül %
+    for j=1:p %notalar dizindeki elemanlar için for döngüsü oluþturdum
+    if  size(nota)==size(notalar{j}) %argüman olan nota boyutu eþit ise notalar dizisindeki j.elemana atadým.
+    if nota==notalar{j}%argüman olan nota, notalar dizisindeki j. elemana eþitse if içindeki frekans hesaplama satýrýný geliyor.
+       ff=2^okt*(2^((j-1)/12)*sabitdeger);%frekansý hesaplýyorum
+    if size(nota)==size(notalar{13})%argüman olan nota boyutu eþit ise notalar dizisindeki 13.elemana baktým
+    if nota==notalar{13}%argüman olan nota notalar dizisindeki 13. elemana eþitse if içindeki kod satýrýný çalýþtýrýyor.
+       ff=0; %frekansý 0 a eþitle.
+     end
+     end
+     end 
+     end
+     end
     end
 end
-
-    end
-end
-
 end
